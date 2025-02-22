@@ -2,7 +2,7 @@ import { IProductService } from "./IProductService";
 import { Product } from "./Product";
 import { SimpleProductData } from "./SimpleProductData";
 
-class ProductService implements IProductService {
+export class ProductService implements IProductService {
 
     private dataSource:SimpleProductData
     private products:Array<Product>
@@ -32,7 +32,7 @@ class ProductService implements IProductService {
        let index=this.products.indexOf(product);
        if(index>0) {
         this.products.splice(index,1);
-        
+
        }
     }
 
